@@ -1,0 +1,74 @@
+/*
+Theme Name: GMC Theme
+Theme URI: http://midtown.gfc.tv/ 
+Description: A theme built for Grace Midtown Church
+Author: matt yates, shaun wallace, jeff kumar
+Author URI: 
+Version: 1.0
+Tags: 
+
+License:
+License URI:
+
+General comments:
+*/
+
+
+body, 
+html {
+	padding:0;
+	margin:0;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#header {
+	/*background-color:#F03;*/
+	width: 960px;
+	margin: 10px auto;
+	height: 100px;
+	border: 3px solid #000;
+	-moz-border-radius: 5px;
+	padding: 5px;
+}
+
+#search_form {
+	display: none; /*can remove this once we find out where the search will go if we have one implemented*/
+	float: right;
+}
+
+#content {
+	/*background-color:#F00;*/
+	border: 3px solid #000;
+	-moz-border-radius: 5px;
+	padding: 5px;
+}
+
+#facebook_like_button {
+	border: 3px solid #000;
+	-moz-border-radius: 5px;
+	padding: 5px;
+}
+
+#sidebar {
+	/*background-color:#03F;*/
+	border: 3px solid #000;
+	-moz-border-radius: 5px;
+	padding: 5px;
+}
+
+#map_canvas {
+	width: 325px;
+	height: 325px;
+}
+
+#footer {
+	/*background-color:#0FC;*/
+	margin: 20px 0;
+	border: 3px solid #000;
+	-moz-border-radius: 5px;
+	padding: 5px;
+}
