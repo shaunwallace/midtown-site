@@ -161,7 +161,8 @@ add_action( 'wp_footer', 'cf5_rps_wp_footer' );
 
 function get_5_posts_slider($category_id){
      global $cf5_rps;                            
-                                                     
+     if(!isset($category_id))
+        { $category_id = 1; }                                               
      $args = array( 'numberposts' => 5, 'offset'=> 0, 'category' => $category_id );
      $rps_posts = array();                       
      $rps_posts_data = get_posts( $args );
@@ -229,7 +230,7 @@ class CF5_RPS_Widget extends WP_Widget {
 
 		if ( $title ) 
 		   echo $before_title . $title . $after_title;
-		get_related_5_slider();
+		get_5_posts_slider();
 		echo $after_widget;
 	}
 
