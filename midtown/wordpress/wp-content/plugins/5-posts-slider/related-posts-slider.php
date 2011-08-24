@@ -56,7 +56,7 @@ function activate_cf5_rps() {
 					   'img_pick'=>array('1','preview_thumb','1','1','1','1'), //use custom field/key, name of the key, use post featured image, pick the image attachment, attachment order,scan images
 					   'img_height'=>'100',
 					   'crop'=>'0',
-					   'sldr_title'=>'Recent Posts',
+					   'sldr_title'=>'',
 					   'stitle_font'=>'Georgia,Times New Roman,Times,serif',
 					   'stitle_color'=>'#333333',
 					   'stitle_size'=>'14',
