@@ -40,7 +40,7 @@ load_plugin_textdomain('cf5_rps', false, dirname( plugin_basename( __FILE__ ) ) 
 //on activation, your Related Posts Slider options will be populated. Here a single option is used which is actually an array of multiple options
 function activate_cf5_rps() {
 	$cf5_rps_opts1 = get_option('cf5_rps_options');
-	$cf5_rps_opts2 =array('per_page' => '4',
+	$cf5_rps_opts2 =array('per_page' => '3',
 	                   'height'=>'250',
 					   'stylesheet' => 'default',
 					   'bgcolor'=>'#ffffff',
