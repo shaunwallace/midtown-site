@@ -9,4 +9,5 @@ get_5_posts_slider($category_id);
                              
 get_footer(); 
  
- ?>
+?>
+				

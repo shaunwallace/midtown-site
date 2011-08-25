@@ -19,13 +19,21 @@ html {
 	padding:0;
 	margin:0;
 }
+/*to fix browsers that don't work with HTML5*/
+header, 
+nav,
+article,
+footer {
+	display: block;
+}
 
+nav {}
 #wrapper {
 	width: 960px;
 	margin: 0 auto;
 }
 
-#header {
+header {
 	/*background-color:#F03;*/
 	width: 960px;
 	margin: 10px auto;
@@ -53,7 +61,7 @@ html {
 	padding: 5px;
 }
 
-#sidebar {
+article {
 	/*background-color:#03F;*/
 	border: 3px solid #000;
 	-moz-border-radius: 5px;
@@ -65,8 +73,9 @@ html {
 	height: 325px;
 }
 
-#footer {
+footer {
 	/*background-color:#0FC;*/
+	text-align: center;
 	margin: 20px 0;
 	border: 3px solid #000;
 	-moz-border-radius: 5px;
