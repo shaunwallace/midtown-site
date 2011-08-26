@@ -11,7 +11,9 @@
 	
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/reset.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/admin.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" type="text/css" media="screen">
+	
 	
 	<!--[if IE]>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/ie.css" type="text/css">
@@ -28,11 +30,14 @@
 		document.createElement('footer');
 	</script>
 	
-	<?php wp_head(); ?>
+	<?php //wp_head(); ?>
 </head>
 	<body>
-		<div id="wrapper">
-			<header>	
+		<div class="wrapper clearfix">
+			<header>
+				<div id="logo">
+					<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" title="Grace Midtown Logo" alt="Grace Midtown Logo" />
+				</div><!-- end logo -->	
 				<nav>
 					<!-- Given a theme_location parameter, the function displays the menu assigned to that location, 
 					or nothing if no such location exists or no menu is assigned to it -->				

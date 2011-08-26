@@ -1,0 +1,228 @@
+#wpadminbar * {
+    height: auto;
+    letter-spacing: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    position: static;
+    text-transform: none;
+    width: auto;
+}
+#wpadminbar *:before, #wpadminbar *:after {
+    content: normal;
+}
+#wpadminbar a, #wpadminbar a:hover, #wpadminbar a img, #wpadminbar a img:hover {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    outline: medium none;
+    text-decoration: none;
+}
+#wpadminbar {
+    background-color: #777777;
+	opacity:0.9;
+	filter:alpha(opacity=90);
+    background-image: -moz-linear-gradient(center bottom , #666666, #7F7F7F);
+    color: #DDDDDD;
+    direction: ltr;
+    font: 12px/28px Arial,Helvetica,sans-serif;
+    height: 28px;
+    left: 0;
+    min-width: 960px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+#wpadminbar ul, #wpadminbar ul li {
+    background: none repeat scroll 0 0 transparent;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 99999;
+}
+#wpadminbar .quicklinks ul {
+    text-align: left;
+}
+#wpadminbar .quicklinks ul li {
+    float: left;
+}
+#wpadminbar .quicklinks > ul > li > a {
+    border-left: 1px solid #808080;
+    border-right: 1px solid #686868;
+}
+#wpadminbar .quicklinks > ul > li:last-child > a {
+    border-right: medium none;
+}
+#wpadminbar .quicklinks > ul > li:hover > a {
+    border-left-color: #707070;
+}
+#wpadminbar .quicklinks a, #wpadminbar .shortlink-input {
+    color: #DDDDDD;
+    display: block;
+    font: 13px/28px Arial,Helvetica,sans-serif;
+    height: 28px;
+    margin: 0;
+    padding: 0 0.85em;
+    text-shadow: 0 -1px 0 #555555;
+}
+#wpadminbar .quicklinks a > span {
+    line-height: 28px;
+}
+#wpadminbar .quicklinks .menupop ul, #wpadminbar .shortlink-input {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.97);
+    border-color: -moz-use-text-color #DFDFDF #DFDFDF;
+    border-right: 1px solid #DFDFDF;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    float: none;
+    position: absolute;
+}
+#wpadminbar .selected .shortlink-input {
+    display: block;
+}
+#wpadminbar .quicklinks .menupop ul li {
+    float: none;
+}
+#wpadminbar .quicklinks .menupop ul li a, #wpadminbar .shortlink-input {
+    color: #555555;
+    min-width: 140px;
+    text-shadow: none;
+    white-space: nowrap;
+}
+#wpadminbar .shortlink-input {
+    width: 200px;
+}
+#wpadminbar .quicklinks .menupop ul li:hover > a {
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 #666666;
+}
+#wpadminbar .quicklinks li:hover > ul, #wpadminbar .quicklinks li.hover > ul {
+    display: block;
+}
+#wpadminbar .quicklinks .menupop li:hover > ul, #wpadminbar .quicklinks .menupop li.hover > ul {
+    margin-left: 100%;
+    margin-top: -28px;
+}
+#wpadminbar .quicklinks li:hover, #wpadminbar .quicklinks .selected {
+    background: -moz-linear-gradient(center bottom , #555555, #3E3E3E) repeat scroll 0 0 transparent;
+}
+#wpadminbar .quicklinks .menupop li:hover {
+    background: -moz-linear-gradient(center bottom , #888888, #9D9D9D) repeat scroll 0 0 transparent;
+}
+#wpadminbar .quicklinks .menupop a > span {
+    background: url("../images/admin-bar-sprite.png?d=11122010") no-repeat scroll right -58px transparent;
+    display: inline;
+    padding-right: 0.8em;
+}
+#wpadminbar .quicklinks .menupop ul li a > span {
+    background: url("../images/admin-bar-sprite.png?d=11122010") no-repeat scroll right -29px transparent;
+    display: block;
+    padding-right: 1.5em;
+}
+#wpadminbar .quicklinks a span#ab-awaiting-mod, #wpadminbar .quicklinks a span#ab-updates {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 10px 10px 10px 10px;
+    color: #333333;
+    display: inline;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    text-shadow: none;
+}
+#wpadminbar .quicklinks a:hover span#ab-awaiting-mod, #wpadminbar .quicklinks a:hover span#ab-updates {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+}
+#wpadminbar .quicklinks li#wp-admin-bar-my-account > a {
+    border-left: medium none;
+}
+#wpadminbar .quicklinks li#wp-admin-bar-my-account-with-avatar > a {
+    background: url("../images/admin-bar-sprite.png?d=11122010") no-repeat scroll left top transparent;
+    border-left: medium none;
+}
+#wpadminbar .quicklinks li#wp-admin-bar-my-account-with-avatar > a img {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #999999;
+    display: inline;
+    float: none;
+    height: 16px;
+    margin: -2px 23px 0 -5px;
+    padding: 0;
+    vertical-align: middle;
+    width: 16px;
+}
+#wpadminbar .quicklinks li#wp-admin-bar-my-account-with-avatar ul {
+    left: 30px;
+}
+#wpadminbar .quicklinks li#wp-admin-bar-my-account-with-avatar ul ul {
+    left: 0;
+}
+#wpadminbar .quicklinks .menupop li a img.blavatar {
+    margin: 0 8px 0 0;
+    padding: 0;
+    vertical-align: middle;
+}
+#wpadminbar #adminbarsearch {
+    float: right;
+    height: 18px;
+    margin: 0;
+    padding: 3px;
+}
+#wpadminbar #adminbarsearch .adminbar-input {
+    -moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #DDDDDD;
+    border: 1px solid #626262;
+    border-radius: 0 0 0 0;
+    box-shadow: 2px 2px 1px #CDCDCD inset;
+    color: #555555;
+    float: left;
+    font: 12px Arial,Helvetica,sans-serif;
+    height: auto;
+    margin: 0 3px 0 0;
+    outline: medium none;
+    padding: 2px 3px;
+    text-shadow: 0 1px 0 #FFFFFF;
+    width: 140px;
+}
+#wpadminbar #adminbarsearch .adminbar-button {
+    background: -moz-linear-gradient(center bottom , #AAAAAA, #CECECE) repeat scroll 0 0 transparent;
+    border: 1px solid #626262;
+    border-radius: 10px 10px 10px 10px;
+    color: #444444;
+    cursor: pointer;
+    float: left;
+    font: bold 12px Arial,Helvetica,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 13px;
+    text-shadow: 0 1px 0 #EEEEEE;
+    width: auto;
+}
+#wpadminbar #adminbarsearch .adminbar-button:active {
+    background: -moz-linear-gradient(center bottom , #A0A0A0, #C1C1C1) repeat scroll 0 0 transparent;
+    box-shadow: 1px 1px 1px #9B9B9B inset;
+}
+#wpadminbar #adminbarsearch .adminbar-button:hover {
+    color: #000000;
+}
+#wpadminbar #adminbarsearch .adminbar-button::-moz-focus-inner {
+    border: medium none;
+}
+* html #wpadminbar {
+    overflow: hidden;
+    position: absolute;
+}
+* html #wpadminbar .quicklinks ul li a {
+    float: left;
+}
+* html #wpadminbar .menupop a span {
+    background-image: none;
+}
