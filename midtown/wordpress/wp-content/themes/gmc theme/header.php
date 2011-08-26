@@ -42,7 +42,11 @@
 					<!-- Given a theme_location parameter, the function displays the menu assigned to that location, 
 					or nothing if no such location exists or no menu is assigned to it -->				
 					<?php wp_nav_menu( array( 'container_class' => 'nav', 'theme_location' => 'Main Navigation' ) ); ?>	
-				<nav>			
+				</nav>	
+				<div id="livestream">
+					<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/livestream_icon.png" title="Click here to watch our livestream" alt="Grace Midtown Livetream" /></a>
+				<p>Livestream<p>
+				</div><!-- end livestream -->		
 				<div id="meeting_times">
 				</div><!-- end meeting_times -->
 				<div id="social_media_icons">

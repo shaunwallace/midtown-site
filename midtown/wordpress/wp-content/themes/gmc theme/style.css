@@ -90,7 +90,8 @@ nav ul li a, nav ul li a:visited {
 }
 
 nav {
-	padding: 20px 0 0;
+	padding: 50px 0 0;
+	float:left;
 }
 
 nav ul li a{
@@ -109,6 +110,21 @@ nav ul li:last-child a {
 /* can remove this once we find out where the search will go if we have one implemented */
 	display: none; 
 	float: right;
+}
+
+#livestream {
+	float: left;
+	margin-top: 21px;
+}
+
+#livestream p {
+	color: #fff9c7;
+}
+
+#livestream img {
+	padding: 0 0 5px;
+	display: block;
+	margin: 0 auto;
 }
 
 /***************************************************** Content *****************************************************/
