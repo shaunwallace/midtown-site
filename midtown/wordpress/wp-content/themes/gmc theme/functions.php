@@ -10,4 +10,17 @@
  	if ( !is_user_logged_in() ) { 
 		add_filter( 'show_admin_bar', '__return_false' );
 	} 
+	
+	add_action( 'init', 'create_post_type' );
+	function create_post_type() {
+		register_post_type( 'Announcement',
+			array(
+				'labels' => array(
+					'name' => __( 'Announcement' ),
+					'singular_name' => __( 'Announcement' )
+				),
+			'public' => true,
+			'has_archive' => true,
+			)
+		); }
 ?>
