@@ -309,7 +309,9 @@ if($rps_posts and !$rps_slider_shown):
         if($flag==1)
          {$ltitle = cf5_rps_word_limiter( $ltitle, $limit = $content_limit, $display_dots = false );}
 			
-	      $slider=$slider.$page_html.'<li class="rps_item"><a href="'.$permalink.'" target="'.$cf5_rps['target'].'" >'.cf5_rps_get_the_image($img_args).'<br /><span class = "rps_title" >'. $ltitle .'</span><br /><br />'. $excerpt . '</a></li>';
+	      $slider=$slider.$page_html.'<li class="rps_item"><a href="'.$permalink.'" target="'.$cf5_rps['target'].'" >'.
+		  '<br /><span class = "rps_title" >'. $ltitle .'</span><br /><br />'.  cf5_rps_get_the_image($img_args). $excerpt.
+		  '</a> </li>';
      }
     
 	$slider=$slider.'</ul></div>';
@@ -345,7 +347,7 @@ function post_excerpt_html( $post_content, $excerpt_length, $post_permalink, $ex
     if(!empty($link_text)){
         $more_link = $link_text;
     }else{
-        $more_link = "<span style = 'text-decoration:underline' > read more <span>";
+        $more_link = "<span style = 'text-decoration:underline' > read more </span>";
     }
     if( !empty($excerpt_words) ){    
         if ( !empty($post_excerpt) ) {

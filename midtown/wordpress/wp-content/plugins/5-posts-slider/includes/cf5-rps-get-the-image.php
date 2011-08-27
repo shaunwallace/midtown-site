@@ -326,8 +326,9 @@ function cf5_rps_display_the_image( $args = array(), $image = false ) {
 	if ( $image['post_thumbnail_id'] )
 		do_action( 'begin_fetch_post_thumbnail_html', $post_id, $image['post_thumbnail_id'], $size );
 
-	/* Add the image attributes to the <img /> element. */
-	$html = '<img src="' . $image['url'] . '" alt="' . esc_attr( strip_tags( $image_alt ) ) . '" class="' . esc_attr( $class ) . '"' . $width . $height . ' />';
+	/* Add the image attributes to the <img /> element. 
+       Code was modifed from original version to meet the midtown design spec */
+	$html = '<img align = "right" src="' . $image['url'] . '" alt="' . esc_attr( strip_tags( $image_alt ) ) . '" class="' . esc_attr( $class ) . '"' . $width . $height . ' />';
 
 	/* If $link_to_post is set to true, link the image to its post. */
 	if ( $link_to_post ) {
