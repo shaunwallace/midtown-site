@@ -17,8 +17,8 @@ General comments:
 
 body, 
 html {
-	padding:0;
-	margin:0;
+	padding: 0;
+	margin: 0;
 	font-family: 'Inconsolata', sans-serif;
 }
 
@@ -27,6 +27,7 @@ body {
   width: 100%;
   display: table;
 }
+
 /* to fix browsers that don't work with HTML5 */
 header, 
 nav,
@@ -48,7 +49,7 @@ footer {
      content: " ";
      clear: both;
      height: 0;
-     }
+}
 
 .clearfix { 
 	display: inline-block; 
@@ -71,7 +72,6 @@ header {
 	width: 960px;
 	margin: 0 auto;
 	height: 100px;
-	/*padding: 5px;*/
 }
 
 #logo {
@@ -80,51 +80,115 @@ header {
 }
 
 /** Main Navigation **/
-nav ul li a, nav ul li a:visited {
+nav ul li a {
     border-right: 2px solid #fff044;
     display: block;
-    padding-top: 7px;
     text-align: center;
     text-decoration: none;
     width: 120px;
 }
 
-nav {
-	padding: 50px 0 0;
-	float:left;
-}
-
-nav ul li a{
+nav ul li a:link, 
+a:active {
 	color: #fff044;
 }
 
+nav ul li a:visited {
+		color: #fff044;
+}
+
+nav {
+	padding: 58px 0 0;
+	float: left;
+}
+
+nav ul li a:hover {
+	color: #fff9c7;
+}
+
 nav ul li {
-	float:left;
+	float: left;
 }
 
 nav ul li:last-child a {
     border: medium none;
 }
-	
-#search_form {
-/* can remove this once we find out where the search will go if we have one implemented */
-	display: none; 
-	float: right;
-}
 
 #livestream {
 	float: left;
-	margin-top: 21px;
+	margin: 21px 0 0 17px;
 }
 
-#livestream p {
+#livestream a:link, a:visited {
 	color: #fff9c7;
+	text-decoration: none;
+}
+#livestream a:hover {
+	color: #000;
 }
 
 #livestream img {
 	padding: 0 0 5px;
 	display: block;
 	margin: 0 auto;
+}
+
+#banner_text {
+	font-size: 60px;
+	margin: 100px 0;
+	text-align: right;
+	float: right;
+	color: #feec5c;
+}
+
+#meeting_times_bar {
+    background-color: #e1ba1b;
+    float: left;
+    height: 90px;
+    left: -187px;
+    margin: 0 auto;
+    opacity: 0.89;
+    position: relative;
+    width: 1335px;
+    z-index: 10;
+}
+
+#meeting_times_bar h3 {
+	font-family: 'Inconsolata', sans-serif;
+	color: #413c2b;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+#gathering_times {
+    float: left;
+    margin-left: 180px;
+    padding: 20px 0 10px;
+}
+
+#meeting_times_bar p {
+    float: left;
+    padding-left: 180px;
+	margin-right: 165px;
+}
+
+#connect {
+    float: left;
+    margin-left: 700px;
+    padding: 20px 0 10px;
+}
+
+#social_media_icons ul {
+	list-style-type: none;
+}
+
+#social_media_icons img{
+	opacity: .5;
+}
+
+#social_media_icons ul li a {
+    display: block;
+	float: left;
 }
 
 /***************************************************** Content *****************************************************/
@@ -149,7 +213,18 @@ article {
 /***************************************************** Footer *****************************************************/
 
 footer {
-	text-align: center;
-	margin: 20px 0;
-	padding: 5px;
+    background-color: #FFFFFF;
+    clear: both;
+    float: left;
+    height: 150px;
+    left: 112px;
+    margin: 0 auto;
+    opacity: 0.87;
+    position: relative;
+    text-align: center;
+    width: 1335px;
+}
+
+#copyright_contact_info {
+	padding: 100px 0 0;
 }

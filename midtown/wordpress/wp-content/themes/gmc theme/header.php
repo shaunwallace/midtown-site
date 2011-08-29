@@ -44,13 +44,32 @@
 					<?php wp_nav_menu( array( 'container_class' => 'nav', 'theme_location' => 'Main Navigation' ) ); ?>	
 				</nav>	
 				<div id="livestream">
-					<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/livestream_icon.png" title="Click here to watch our livestream" alt="Grace Midtown Livetream" /></a>
-				<p>Livestream<p>
-				</div><!-- end livestream -->		
-				<div id="meeting_times">
+					<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/livestream_icon.png" title="Click here to watch our livestream" 		
+					alt="Grace Midtown Livetream" /></a>
+				<a href="#">Livestream</a>
+				</div><!-- end livestream -->
+				<div id="banner_text">
+					MAY THE<br />
+					KINGDOM<br />
+					OF GOD COME<br />
+					IN THIS CITY
+				</div><!-- end banner_text -->		
+				<div id="meeting_times_bar">
+					<h3 id="gathering_times">Church Gathering Times</h3>
+					<h3 id="connect">Connect</h3>
+					<p>Sundays 9:00AM, 10:45AM, 6:00PM, 8:00PM at 1095 State Street • Kidtown not available at 8:00PM</p>
+				
+					<div id="social_media_icons">
+					
+						<ul>
+							<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/podcast.png" /></a></li>
+							<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/facebook.png" /></a></li>
+							<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/twitter.png" /></a></li>
+							<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/rss.png" /></a></li>
+							<!--  <li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/email_icon.png" /></a></li> -->
+						</ul>
+					</div><!-- end social_media_icons -->
 				</div><!-- end meeting_times -->
-				<div id="social_media_icons">
-				</div><!-- end social_media_icons -->
 			</header>
 			<div id="content">
 
