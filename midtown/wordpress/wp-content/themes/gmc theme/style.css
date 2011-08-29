@@ -191,6 +191,10 @@ nav ul li:last-child a {
 	float: left;
 }
 
+#social_media_icons {
+	margin-left: 1100px;
+}
+
 /***************************************************** Content *****************************************************/
 #content {
 	padding: 5px;
@@ -214,10 +218,7 @@ article {
 
 footer {
     background-color: #FFFFFF;
-    clear: both;
-    float: left;
     height: 150px;
-    left: 112px;
     margin: 0 auto;
     opacity: 0.87;
     position: relative;

@@ -30,7 +30,7 @@
 		document.createElement('footer');
 	</script>
 	
-	<?php wp_head(); ?>
+	<?php //wp_head(); ?>
 </head>
 	<body>
 		<div class="wrapper clearfix">
@@ -57,8 +57,15 @@
 				<div id="meeting_times_bar">
 					<h3 id="gathering_times">Church Gathering Times</h3>
 					<h3 id="connect">Connect</h3>
-					<p>Sundays 9:00AM, 10:45AM, 6:00PM, 8:00PM at 1095 State Street • Kidtown not available at 8:00PM</p>
-				
+					
+						<?php global $post; // required
+						$args = array('post_type' => 'service_times'); 
+						$service_times = get_posts($args);
+						
+						foreach( $service_times as $post ) : setup_postdata($post); ?>
+							<?php the_content();?>
+						<?php endforeach; ?>
+									
 					<div id="social_media_icons">
 					
 						<ul>
