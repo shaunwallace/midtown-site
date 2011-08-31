@@ -30,7 +30,7 @@
 		document.createElement('footer');
 	</script>
 	
-	<?php //wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 	<body>
 		<div class="wrapper clearfix">
@@ -58,14 +58,19 @@
 					<h3 id="gathering_times">Church Gathering Times</h3>
 					<h3 id="connect">Connect</h3>
 					
-						<?php global $post; // required
-						$args = array('post_type' => 'service_times'); 
-						$service_times = get_posts($args);
-						
-						foreach( $service_times as $post ) : setup_postdata($post); ?>
-							<?php the_content();?>
-						<?php endforeach; ?>
-									
+					<?php
+						//the query to find the service times custom post type
+						$service_times = new WP_Query();
+						$service_times->query( 'post_type=service_times' );
+					
+						//the loop
+						while ( $service_times->have_posts() ) : $service_times->the_post();
+							echo the_content();
+						endwhile;
+
+						// Reset Post Data to have Template Tags use the main query's current post again. 
+						wp_reset_postdata(); 
+					?>			
 					<div id="social_media_icons">
 					
 						<ul>
