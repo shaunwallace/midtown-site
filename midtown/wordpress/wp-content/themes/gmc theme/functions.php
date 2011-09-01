@@ -14,64 +14,61 @@
    //J.K added a custom post type for announcements for the slider.
    add_action( 'init', 'create_post_type' );                                             
    function create_post_type() {         
-       register_post_type( 'Announcement',
          
-       array(
+       	$args = array(
          
-       'labels' => array(
-         
-          'name' => __( 'Announcement' ),         
-          'singular_name' => __( 'Announcement' )         
-         ),         
-       'public' => true,
-        
-       'has_archive' => true,
-         
-       )         
-     ); }
+		       	'labels' => array(
+		       				'name' => __( 'Announcement' ),         
+		       				'singular_name' => __( 'Announcement' )         
+		       	),         
+		       	'public' => true,
+		       	'has_archive' => true
+		);
+
+		register_post_type( 'Announcement', $args );        
+    }
+
 	/* Add action for custom post type in-order for the meeting times to be changes from the ui */
-	add_action('init', 'create_service_time_list');
-	function create_service_time_list() 
-	{
+	add_action( 'init', 'create_service_time_post_type' );
+	function create_service_time_post_type() {
 	  
 		$args = array(
-		'label' => 'Service Times',
-	    'menu_name' => 'Service Times',
-	    'public' => true,
-	    'publicly_queryable' => true,
-	    'show_ui' => true, 
-	    'show_in_menu' => true, 
-	    'query_var' => true,
-	    'rewrite' => array('slug' => 'Service Times'),
-	    'capability_type' => 'post',
-	    'has_archive' => false, 
-	    'hierarchical' => false,
-	    'menu_position' => null,
-	    'supports' => array('title','editor','author','thumbnail','excerpt','comments')
-	  ); 
-	  register_post_type('service_times',$args);
+				'label' => 'Service Times',
+	    		'menu_name' => 'Service Times',
+	    		'public' => true,
+			    'publicly_queryable' => true,
+			    'show_ui' => true, 
+			    'show_in_menu' => true, 
+			    'query_var' => true,
+			    'rewrite' => array('slug' => 'Service Times'),
+			    'capability_type' => 'post',
+			    'has_archive' => false, 
+			    'hierarchical' => false,
+			    'menu_position' => null,
+			    'supports' => array( 'title','editor','author','thumbnail','excerpt','comments' )
+	  	); 
+	  register_post_type( 'service_times', $args );
 	}
 	
-	/* Add action for custom post type in-order for the meeting times to be changes from the ui */
-	add_action('init', 'create_footer_info');
-	function create_footer_info() 
-	{
+	/* Add action for custom post type in-order for the footer info to be changes from the ui. This includes the address, phone #, etc. */
+	add_action( 'init', 'create_footer_info_post_type' );
+	function create_footer_info_post_type() {
 	  
 		$args = array(
-		'label' => 'Copyright and Address',
-	    'menu_name' => 'Copyright & Address Info',
-	    'public' => true,
-	    'publicly_queryable' => true,
-	    'show_ui' => true, 
-	    'show_in_menu' => true, 
-	    'query_var' => true,
-	    'rewrite' => true,
-	    'capability_type' => 'post',
-	    'has_archive' => false, 
-	    'hierarchical' => false,
-	    'menu_position' => null,
-	    'supports' => array('title','editor','author','thumbnail','excerpt','comments')
-	  ); 
-	  register_post_type('footer_info',$args);
+				'label' => 'Copyright and Address',
+			    'menu_name' => 'Copyright & Address Info',
+			    'public' => true,
+			    'publicly_queryable' => true,
+			    'show_ui' => true, 
+			    'show_in_menu' => true, 
+			    'query_var' => true,
+			    'rewrite' => true,
+			    'capability_type' => 'post',
+			    'has_archive' => false, 
+			    'hierarchical' => false,
+			    'menu_position' => null,
+			    'supports' => array( 'title','editor','author','thumbnail','excerpt','comments' )
+	  	); 
+	  register_post_type( 'footer_info', $args );
 	}
 ?>
