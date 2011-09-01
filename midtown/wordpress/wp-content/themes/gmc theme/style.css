@@ -197,7 +197,16 @@ nav ul li:last-child a {
 
 /***************************************************** Content *****************************************************/
 #content {
-	padding: 5px;
+	padding: 0px;
+}
+
+#content_wrapper {
+    background-color: #000000;
+    float: left;
+    margin-left: -188px;
+    opacity: 0.8;
+    position: relative;
+    width: 1336px;
 }
 
 #facebook_like_button {
