@@ -42,7 +42,7 @@ function activate_cf5_rps() {
 	$cf5_rps_opts1 = get_option('cf5_rps_options');
 	$cf5_rps_opts2 =array('per_page' => '3',
 	                   'height'=>'250',
-					   'stylesheet' => 'plain',
+					   'stylesheet' => 'default',
 					   'bgcolor'=>'#ffffff',
 					   'fgcolor'=>'#f1f1f1',
 					   'hvcolor'=>'#6d6d6d',
@@ -159,10 +159,11 @@ function cf5_rps_wp_footer() {
 
 add_action( 'wp_footer', 'cf5_rps_wp_footer' );
 
-function get_5_posts_slider(){
+function get_5_posts_slider($category_id){
      global $cf5_rps;                            
-                                                  
-     $args = array( 'numberposts' => 5, 'offset'=> 0,  'post_type' => 'Announcement' );
+     if(!isset($category_id))
+        { $category_id = 1; }                                               
+     $args = array( 'numberposts' => 5, 'offset'=> 0, 'category' => $category_id );
      $rps_posts = array();                       
      $rps_posts_data = get_posts( $args );
      foreach($rps_posts_data as $post)
@@ -246,7 +247,8 @@ add_action( 'widgets_init', create_function('', 'return register_widget("CF5_RPS
 // function for adding settings page to wp-admin
 function cf5_rps_settings() {
     // Add a new submenu under Options:
-    add_options_page('Related Posts Slider', 'Related Posts Slider', 9, basename(__FILE__), 'cf5_rps_settings_page');
+	//changed the value of 9 to edit_pages, the old integer was deprecated since version 2.0 now using roles and capabilities
+    add_options_page('Related Posts Slider', 'Related Posts Slider', 'edit_pages', basename(__FILE__), 'cf5_rps_settings_page');
 }
 
 function cf5_rps_admin_head() {
