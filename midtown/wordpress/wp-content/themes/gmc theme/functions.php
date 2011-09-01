@@ -11,6 +11,24 @@
 		add_filter( 'show_admin_bar', '__return_false' );
 	} 
 	
+   //J.K added a custom post type for announcements for the slider.
+   add_action( 'init', 'create_post_type' );                                             
+   function create_post_type() {         
+       register_post_type( 'Announcement',
+         
+       array(
+         
+       'labels' => array(
+         
+          'name' => __( 'Announcement' ),         
+          'singular_name' => __( 'Announcement' )         
+         ),         
+       'public' => true,
+        
+       'has_archive' => true,
+         
+       )         
+     ); }
 	/* Add action for custom post type in-order for the meeting times to be changes from the ui */
 	add_action('init', 'create_service_time_list');
 	function create_service_time_list() 

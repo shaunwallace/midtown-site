@@ -5,8 +5,8 @@
 .rps_sldrtitle{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;font-style:normal;color:#444444;margin:10px 0;}
 .rps_wrapper{height:225px;color:#555555;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;clear:both;position:relative;overflow:hidden;padding:5px;}
 img.rps_thumb{border:1px solid #ccc;padding:2px;width:100px !important;height:100px !important;}	
-.rps_item a{color:#555555 !important;text-decoration:none;	display:block;	padding:5px;}
-.rps_item a:hover ,.rps_item a:active {background-color: #f1f1f1;}
+.rps_item a{color:#ffffff !important;text-decoration:none;	display:block;	padding:5px;}
+.rps_item a:hover ,.rps_item a:active {background-color: #111111;}
 
 .jcarousel-skin-plain .jcarousel-container {
 }
@@ -127,7 +127,7 @@ img.rps_thumb{border:1px solid #ccc;padding:2px;width:100px !important;height:10
 .rps_title{
     font-size:26px;
     font-family:Calibri, Verdana, Ariel, sans-serif;
-    /*This is a comment the color needs to be changed to color:#ffff7b;  */
+    color:#ffff7b;   
     
 }
 
