@@ -1,5 +1,7 @@
 <?php 
 
+error_reporting(0);
+
 get_header();  
 
 //calls the slider function

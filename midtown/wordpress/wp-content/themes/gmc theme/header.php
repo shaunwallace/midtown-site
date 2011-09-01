@@ -83,6 +83,7 @@
 					</div><!-- end social_media_icons -->
 				</div><!-- end meeting_times -->
 			</header>
+			<div id="content_wrapper">
 			<div id="content">
 
 
