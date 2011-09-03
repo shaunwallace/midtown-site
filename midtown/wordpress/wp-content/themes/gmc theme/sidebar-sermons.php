@@ -9,7 +9,7 @@
 				//the loop
 				while ( $latest_sermon->have_posts() ) : $latest_sermon->the_post(); ?>
 				<span class="sermon_title">
-				<?php	echo the_title();  	echo the_ID();?>
+				<?php	echo the_title(); ?>
 				</span>
 				<?php	echo the_content();
 				endwhile;
