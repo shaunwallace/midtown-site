@@ -5,13 +5,14 @@
 	    <?php
 			//the query to find the service times custom post type
 			$story_post = new WP_Query();
-			$story_post->query( 'post_type=stories' );
+			$story_post->query( array( 'post_type' => 'stories', 'showposts' => 3));
 		
 			//the loop
 			while ( $story_post->have_posts() ) : $story_post->the_post(); ?>
 			<div class="story_post">
 			<span class="story_post_title">
 			<?php echo the_title(); ?>
+		
 			</span>
 			<span class="story_date">
 			<?php echo get_the_date('M j, Y \a\t g:ia');?>

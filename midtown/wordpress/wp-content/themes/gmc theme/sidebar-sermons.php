@@ -4,12 +4,12 @@
 		    <?php
 				//the query to find the service times custom post type
 				$latest_sermon = new WP_Query();
-				$latest_sermon->query( 'post_type=sermons' );
+				$latest_sermon->query( array('post_type' => 'sermons', 'showposts' => 1));
 			
 				//the loop
 				while ( $latest_sermon->have_posts() ) : $latest_sermon->the_post(); ?>
 				<span class="sermon_title">
-				<?php	echo the_title(); ?>
+				<?php	echo the_title();  	echo the_ID();?>
 				</span>
 				<?php	echo the_content();
 				endwhile;
