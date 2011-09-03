@@ -153,6 +153,11 @@ nav ul li:last-child a {
     z-index: 10;
 }
 
+#midtown_cross_logo {
+	float: left;
+	margin: 18px 20px  0 130px;
+}
+
 #meeting_times_bar h3 {
 	font-family: 'Inconsolata', sans-serif;
 	color: #413c2b;
@@ -162,13 +167,11 @@ nav ul li:last-child a {
 
 #gathering_times {
     float: left;
-    margin-left: 180px;
     padding: 20px 0 10px;
 }
 
 #meeting_times_bar p {
     float: left;
-    padding-left: 180px;
 	margin-right: 165px;
 }
 
@@ -209,13 +212,79 @@ nav ul li:last-child a {
     width: 1336px;
 }
 
+#latest_sermon {
+	float: left;
+	width: 580px;
+	margin-right: 40px;
+	height: 400px;
+	padding: 10px;
+}
+
+#latest_sermon p{
+	padding: 0 !important;
+}
+
+.sermon_title {
+	color: #FFF9C7;	
+}
+#stories {
+	float: left;
+	width: 280px;
+	padding: 10px;
+}
+
+#stories a:link,
+a:active,
+a:visited {
+	color: #FFF9C7;
+}
+
+#stories a:hover {
+	color: #FFF;
+}
+
+.story_post {
+	padding-bottom: 20px;
+}
+
+.story_post_title {
+	color: #FFF9C7;
+}
+
+.story_date {
+	float: right;
+	color: #FFF9C7;
+	font-size: 13px;
+	padding-top: 3px;
+}
+
 #facebook_like_button {
 	padding: 5px;
 }
 
 /***************************************************** Sidebars *****************************************************/
 article {
-	padding: 5px;
+	font-family: 'Inconsolata', sans-serif;
+	color: #fff044;
+	margin-bottom: 75px;
+}
+
+article h1 {
+	padding: 0 0 35px;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+article p {
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 18px;
+	padding-top: 15px;
+}
+
+#article_wrapper {
+	width: 960px;
+	margin: 0 auto;
 }
 
 #map_canvas {
@@ -227,7 +296,9 @@ article {
 
 footer {
     background-color: #FFFFFF;
+    clear: both;
     height: 150px;
+    left: -188px;
     margin: 0 auto;
     opacity: 0.87;
     position: relative;

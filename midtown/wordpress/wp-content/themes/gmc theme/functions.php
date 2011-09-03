@@ -11,6 +11,15 @@
 		add_filter( 'show_admin_bar', '__return_false' );
 	} 
 	
+	if ( function_exists ('register_sidebar')) { 
+	    register_sidebar ('stories'); 
+	} 
+	
+	if ( function_exists ('register_sidebar')) { 
+	    register_sidebar ('sermons'); 
+	} 
+	
+	
    //J.K added a custom post type for announcements for the slider.
    add_action( 'init', 'create_post_type' );                                             
    function create_post_type() {         
@@ -70,5 +79,49 @@
 			    'supports' => array( 'title','editor','author','thumbnail','excerpt','comments' )
 	  	); 
 	  register_post_type( 'footer_info', $args );
+	}
+	
+	/* Add action for custom post type for the latest sermon posts */
+	add_action( 'init', 'create_sermon_post_type' );
+	function create_sermon_post_type() {
+	  
+		$args = array(
+				'label' => 'Latest Sermon',
+			    'menu_name' => 'Latest Sermon',
+			    'public' => true,
+			    'publicly_queryable' => true,
+			    'show_ui' => true, 
+			    'show_in_menu' => true, 
+			    'query_var' => true,
+			    'rewrite' => true,
+			    'capability_type' => 'post',
+			    'has_archive' => false, 
+			    'hierarchical' => false,
+			    'menu_position' => null,
+			    'supports' => array( 'title','editor','author','thumbnail','excerpt','comments' )
+	  	); 
+	  register_post_type( 'sermons', $args );
+	}
+	
+	/* Add action for custom post type for the latest sermon posts */
+	add_action( 'init', 'create_stories_post_type' );
+	function create_stories_post_type() {
+	  
+		$args = array(
+				'label' => 'Stories',
+			    'menu_name' => 'Stories',
+			    'public' => true,
+			    'publicly_queryable' => true,
+			    'show_ui' => true, 
+			    'show_in_menu' => true, 
+			    'query_var' => true,
+			    'rewrite' => true,
+			    'capability_type' => 'post',
+			    'has_archive' => false, 
+			    'hierarchical' => false,
+			    'menu_position' => null,
+			    'supports' => array( 'title','editor','author','thumbnail','excerpt','comments' )
+	  	); 
+	  register_post_type( 'stories', $args );
 	}
 ?>

@@ -55,6 +55,7 @@
 					IN THIS CITY
 				</div><!-- end banner_text -->		
 				<div id="meeting_times_bar">
+					<img id="midtown_cross_logo" src="<?php bloginfo('template_directory'); ?>/images/grace_midtown_symbol.png">
 					<h3 id="gathering_times">Church Gathering Times</h3>
 					<h3 id="connect">Connect</h3>
 					
@@ -84,8 +85,15 @@
 				</div><!-- end meeting_times -->
 			</header>
 			<div id="content_wrapper">
-			<div id="content">
+				<div id="content">
+					<?php 
+						//calls the slider function
+						get_5_posts_slider(); 
+					?>
+					<!--
+						<div id="google_map">
+							<div id="map_canvas"></div>	
+						</div>
+					-->
 
-
-
-
+					</div><!-- end content -->
