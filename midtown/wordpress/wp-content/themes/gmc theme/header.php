@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang=en>
+<html <?php language_attributes(); ?>>
 	<head>
-		<meta charset=<?php bloginfo('charset'); ?>>
+		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="description" content="<?php bloginfo('description') ?>">
 		<meta name="keywords" content="Midtown, Grace, Church, Jesus, Ministry, God, Christian, Atlanta">
 		<meta name="author" content="Shaun Wallace, Matt Yates, Jeff Kumar">
-		<title>	
-			<?php bloginfo('name');?> | <?php wp_title();?>
-	</title>
+		
+		<title><?php wp_title(); ?> <?php bloginfo( 'name' ); ?></title>
 	
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/reset.css" type="text/css" media="screen">
@@ -36,8 +35,24 @@
 		<div class="wrapper clearfix">
 			<header>
 				<div id="logo">
-					<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" title="Grace Midtown Logo" alt="Grace Midtown Logo" />
+					<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" title="Grace Midtown Logo" alt="Grace Midtown Logo" /></a>
 				</div><!-- end logo -->	
+				<div id="times_wrapper">
+					<!-- <h3 id="gathering_times">Church Gathering Times</h3> -->				
+					<?php
+						//the query to find the service times custom post type
+						$service_times = new WP_Query();
+						$service_times->query( 'post_type=service_times' );
+				
+						//the loop
+						while ( $service_times->have_posts() ) : $service_times->the_post();
+							the_content();
+						endwhile;
+
+						// Reset Post Data to have Template Tags use the main query's current post again. 
+						//wp_reset_postdata(); 
+					?>
+				</div><!-- end times_wrapper -->
 				<nav>
 					<!-- Given a theme_location parameter, the function displays the menu assigned to that location, 
 					or nothing if no such location exists or no menu is assigned to it -->				
@@ -54,46 +69,17 @@
 					OF GOD COME<br />
 					IN THIS CITY
 				</div><!-- end banner_text -->		
-				<div id="meeting_times_bar">
-					<img id="midtown_cross_logo" src="<?php bloginfo('template_directory'); ?>/images/grace_midtown_symbol.png">
-					<h3 id="gathering_times">Church Gathering Times</h3>
-					<h3 id="connect">Connect</h3>
-					
-					<?php
-						//the query to find the service times custom post type
-						$service_times = new WP_Query();
-						$service_times->query( 'post_type=service_times' );
-					
-						//the loop
-						while ( $service_times->have_posts() ) : $service_times->the_post();
-							echo the_content();
-						endwhile;
-
-						// Reset Post Data to have Template Tags use the main query's current post again. 
-						wp_reset_postdata(); 
-					?>			
-					<div id="social_media_icons">
-					
-						<ul>
-							<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/podcast.png" /></a></li>
-							<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/facebook.png" /></a></li>
-							<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/twitter.png" /></a></li>
-							<li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/rss.png" /></a></li>
-							<!--  <li><a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/email_icon.png" /></a></li> -->
-						</ul>
-					</div><!-- end social_media_icons -->
-				</div><!-- end meeting_times -->
 			</header>
 			<div id="content_wrapper">
 				<div id="content">
 					<?php 
 						//calls the slider function
-						get_5_posts_slider(); 
+						if ( is_home() ) {
+							get_5_posts_slider(); 
+						}
 					?>
 					<!--
 						<div id="google_map">
 							<div id="map_canvas"></div>	
 						</div>
 					-->
-
-					</div><!-- end content -->

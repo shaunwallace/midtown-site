@@ -1,0 +1,81 @@
+body {
+	width: 100%;
+	display: table;
+	background: #0a0a0a url(images/worship_background_com.png) no-repeat center top !important; 
+}
+
+#map_header_text {
+	color: #fff;
+	margin: 70px 0 20px;
+	width: 600px;
+}
+
+#content {
+	width: 1000px !important;
+	margin: 0 auto !important;
+}
+
+#sidebar {
+	width: 350px;
+	height: 475px;
+	margin: -50px 0 0;
+	float: left;
+	color: #fff;
+}
+
+#sidebar h3 {
+	color: #e1ba1b;
+	padding: 0 0 10px;
+}
+#sidebar hr{
+	height: 1px;
+	background-color: #e1ba1b;
+	color: #e1ba1b !important;
+	border-style: none;
+}
+
+.calendar_date {
+	font-size: 20px;
+	padding: 20px 0 10px;
+}
+
+#sidebar #see_our_calender {
+	display: inline;
+	padding-bottom: 30px;
+	top: -3px;
+	position: relative;
+}
+
+#map_canvas {
+	width: 600px;
+	height: 400px;
+	float: left;
+	margin-right: 40px;
+}
+
+.vision_header p{
+	font-size: 18px !important;
+	color: #e1ba1b !important;
+	margin: 25px 0 !important;
+	
+}
+
+.vision {
+	float: left;
+	color: #fff;
+	width: 220px;
+	margin: 30px 25px 50px 0;
+}
+
+#footer {
+	width: 100% !important;
+}
+
+#meeting_times_bar {
+	width: 100% !important;
+}
+
+#yellow_bar_wrapper {
+	margin: 0 auto;
+}
+

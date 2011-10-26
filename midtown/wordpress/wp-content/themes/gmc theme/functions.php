@@ -19,6 +19,9 @@
 	    register_sidebar ('sermons'); 
 	} 
 	
+	if ( function_exists( 'add_theme_support' ) ) { 
+	  add_theme_support( 'post-thumbnails' ); 
+	}
 	
    //J.K added a custom post type for announcements for the slider.
    add_action( 'init', 'create_post_type' );                                             
@@ -123,5 +126,49 @@
 			    'supports' => array( 'title','editor','author','thumbnail','excerpt','comments' )
 	  	); 
 	  register_post_type( 'stories', $args );
+	}
+	
+	/* Add action for custom post type for the latest sermon posts */
+	add_action( 'init', 'create_comm_calendar_post_type' );
+	function create_comm_calendar_post_type() {
+	  
+		$args = array(
+				'label' => 'Community Calendar',
+			    'menu_name' => 'Community Calendar',
+			    'public' => true,
+			    'publicly_queryable' => true,
+			    'show_ui' => true, 
+			    'show_in_menu' => true, 
+			    'query_var' => true,
+			    'rewrite' => true,
+			    'capability_type' => 'post',
+			    'has_archive' => true, 
+			    'hierarchical' => false,
+			    'menu_position' => null,
+			    'supports' => array( 'title','editor','author','thumbnail','excerpt','comments' )
+	  	); 
+	  register_post_type( 'community_calendar', $args );
+	}
+	
+	/* Add action for custom post type for the latest sermon posts */
+	add_action( 'init', 'create_comm_bio_post_type' );
+	function create_comm_bio_post_type() {
+	  
+		$args = array(
+				'label' => 'Community Vision',
+			    'menu_name' => 'Community Vision Statement',
+			    'public' => true,
+			    'publicly_queryable' => true,
+			    'show_ui' => true, 
+			    'show_in_menu' => true, 
+			    'query_var' => true,
+			    'rewrite' => true,
+			    'capability_type' => 'post',
+			    'has_archive' => true, 
+			    'hierarchical' => false,
+			    'menu_position' => null,
+			    'supports' => array( 'title','editor','author','thumbnail','excerpt','comments' )
+	  	); 
+	  register_post_type( 'community_vision', $args );
 	}
 ?>

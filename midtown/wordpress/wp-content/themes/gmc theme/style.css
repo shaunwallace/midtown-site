@@ -14,6 +14,17 @@ General comments:
 */
 
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@font-face { 
+	font-family: Coolvetica; 
+	src: url('fonts/coolvetica.ttf'),
+	     url('fonts/coolvetica.eot') format("opentype"); /* IE */ 
+} 
+
+@font-face { 
+	font-family: courier_new_bold; 
+	src: url('fonts/Courier_New_Bold.ttf'),
+	     url('fonts/Courier_New_Bold.eot') format("opentype"); /* IE */ 
+}
 
 body, 
 html {
@@ -23,9 +34,10 @@ html {
 }
 
 body {
-  background: #0a0a0a url(images/background_image.png) no-repeat center top;
-  width: 100%;
-  display: table;
+	/*background: #0a0a0a url(images/background_image.png) no-repeat center top; */
+	background: #0a0a0a url(images/worship_background.png) no-repeat center top; 
+	width: 100%;
+	display: table;
 }
 
 /* to fix browsers that don't work with HTML5 */
@@ -43,25 +55,25 @@ footer {
 
 /* clearfix hack */
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
 
-.clearfix { 
-	display: inline-block; 
+.clearfix {
+	display: inline-block;
 }
 
 /* start commented backslash hack \*/
-* html .clearfix { 
-	height: 1%; 
+* html .clearfix {
+	height: 1%;
 }
 
-.clearfix { 
-	display: block; 
+.clearfix {
+	display: block;
 }
 /* close commented backslash hack */
 
@@ -81,11 +93,12 @@ header {
 
 /** Main Navigation **/
 nav ul li a {
-    border-right: 2px solid #fff044;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    width: 120px;
+	font-size: 22px;
+	border-right: 2px solid #fff044;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 145px;
 }
 
 nav ul li a:link, 
@@ -94,11 +107,11 @@ a:active {
 }
 
 nav ul li a:visited {
-		color: #fff044;
+	color: #fff044;
 }
 
 nav {
-	padding: 58px 0 0;
+	padding: 15px 0 0;
 	float: left;
 }
 
@@ -111,12 +124,12 @@ nav ul li {
 }
 
 nav ul li:last-child a {
-    border: medium none;
+	border: medium none;
 }
 
 #livestream {
 	float: left;
-	margin: 21px 0 0 10px;
+	margin: -15px 0 0 10px;
 }
 
 #livestream a:link, a:visited {
@@ -134,68 +147,63 @@ nav ul li:last-child a {
 }
 
 #banner_text {
-	font-size: 60px;
+	font-size: 85px;
+	font-family: Coolvetica;
 	margin: 100px 0;
 	text-align: right;
 	float: right;
-	color: #feec5c;
+	color: #fff;
 }
 
-#meeting_times_bar {
-    background-color: #e1ba1b;
-    float: left;
-    height: 90px;
-    left: -187px;
-    margin: 0 auto;
-    opacity: 0.89;
-    position: relative;
-    width: 1335px;
-    z-index: 10;
-}
 
-#midtown_cross_logo {
+
+#times_wrapper {
 	float: left;
-	margin: 18px 20px  0 130px;
+	margin: 40px 0 0 45px;
+}
+
+#times_wrapper p {
+	color: #fff;
 }
 
 #meeting_times_bar h3 {
 	font-family: 'Inconsolata', sans-serif;
-	color: #413c2b;
+
 	font-size: 22px;
 	font-weight: normal;
 }
 
 #gathering_times {
-    float: left;
-    padding: 20px 0 10px;
+	float: left;
+	padding: 20px 0 10px;
 }
 
 #meeting_times_bar p {
-    float: left;
-	margin-right: 165px;
+	float: left;
 }
 
 #connect {
-    float: left;
-    margin-left: 700px;
-    padding: 20px 0 10px;
+	padding: 20px 0px 10px 25px;
 }
 
 #social_media_icons ul {
 	list-style-type: none;
 }
 
-#social_media_icons img{
+#social_media_icons img {
 	opacity: .5;
 }
 
 #social_media_icons ul li a {
-    display: block;
+	display: block;
 	float: left;
+	margin: 0 auto;
 }
 
 #social_media_icons {
-	margin-left: 1100px;
+	float: right;
+	width: 195px;
+	padding: 6px 0 0;
 }
 
 /***************************************************** Content *****************************************************/
@@ -204,12 +212,12 @@ nav ul li:last-child a {
 }
 
 #content_wrapper {
-    background-color: #000000;
-    float: left;
-    margin-left: -188px;
-    opacity: 0.8;
-    position: relative;
-    width: 1336px;
+	/*background-color: #000000;*/
+	float: left;
+	margin-left: -188px;
+	opacity: 0.8;
+	position: relative;
+	width: 1336px;
 }
 
 #latest_sermon {
@@ -220,12 +228,12 @@ nav ul li:last-child a {
 	padding: 10px;
 }
 
-#latest_sermon p{
+#latest_sermon p {
 	padding: 0 !important;
 }
 
 .sermon_title {
-	color: #FFF9C7;	
+	color: #FFF9C7;
 }
 #stories {
 	float: left;
@@ -287,25 +295,47 @@ article p {
 	margin: 0 auto;
 }
 
-#map_canvas {
-	width: 325px;
-	height: 325px;
-}
-
 /***************************************************** Footer *****************************************************/
 
 footer {
-    background-color: #FFFFFF;
-    clear: both;
-    height: 150px;
-    left: -188px;
-    margin: 0 auto;
-    opacity: 0.87;
-    position: relative;
-    text-align: center;
-    width: 1335px;
+	background-color: #000;
+	clear: both;
+	/*width: 1335px;*/
+	width: 100%;
+	height: 150px;
+	/*left: -188px;*/
+	margin: 0 auto;
+	opacity: 0.87;
+	position: relative;
+	text-align: center;
+	color: #7a7878;
+}
+
+#meeting_times_bar {
+	background-color: #e1ba1b;
+	float: left;
+	/*width: 1335px;*/
+	width: 100%;
+	height: 45px;
+	/*left: -187px;*/
+	margin: 0 auto;
+	opacity: 0.89;
+	position: relative;
+	z-index: 10;
+}
+
+#meeting_times_bar p {
+	color: #000;
+	font-size: 22px;
+	font-family: courier_new_bold;
+	padding: 10px 0 0;
+}
+
+#midtown_cross_logo {
+	float: left;
+	margin: 4px 20px  0 205px;
 }
 
 #copyright_contact_info {
-	padding: 100px 0 0;
+	padding: 75px 0 0;
 }
